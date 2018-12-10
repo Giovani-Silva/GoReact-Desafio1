@@ -1,7 +1,7 @@
 $blue-dark: #3b5998;
 $blue-medium: #8b9dc3;
-$blue-light: #dfe3ee;
-$gray: silver;
+$blue-light: #d4d9e7;
+$gray: #d7d7dd;
 $gray-light: #f7f7f7;
 $black: #232323;
 
@@ -49,7 +49,7 @@ html {
       .post {
         background: $gray-light;
         width: 75%;
-        max-width: 320px;
+        max-width: 600px;
         min-height: 160px;
         border-radius: 5px;
         padding: 15px;
@@ -91,7 +91,7 @@ html {
             flex-direction: column;
 
             small {
-              color: $gray;
+              color: $blue-medium;
             }
           }
         }

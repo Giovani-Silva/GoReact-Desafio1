@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react'
-import { render } from 'react-dom'
+import React, { Component, Fragment } from 'react';
+import { render } from 'react-dom';
 
-import './style.scss'
+import './style.scss';
 
-import Header from './Header'
-import Post from './Post'
+import Header from './Components/Header';
+import Post from './Components/Post';
 
 class App extends Component {
   state = {
@@ -19,26 +19,34 @@ class App extends Component {
       },
       {
         id: Math.random(),
-        avatar: 'https://randomuser.me/api/portraits/women/1.jpg',
+        avatar: 'https://randomuser.me/api/portraits/women/57.jpg',
         name: 'Nanda Almeida',
         moment: '10 min ago',
         body:
           'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, natus! Nesciunt nemo molestiae perspiciatis ipsam eaque eum cum natus. '
+      },
+      {
+        id: Math.random(),
+        avatar: 'https://randomuser.me/api/portraits/women/18.jpg',
+        name: 'Sammy Zuiuda',
+        moment: '15 min ago',
+        body:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, natus! '
       }
     ]
-  }
+  };
 
   getPosts = () => {
-    return this.state.posts.map(post => <Post key={post.id} {...post} />)
-  }
-  render () {
+    return this.state.posts.map(post => <Post key={post.id} {...post} />);
+  };
+  render() {
     return (
       <Fragment>
         <Header />
         {this.getPosts()}
       </Fragment>
-    )
+    );
   }
 }
 
-render(<App />, document.getElementById('app'))
+render(<App />, document.getElementById('app'));
