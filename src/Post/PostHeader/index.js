@@ -1,12 +1,12 @@
 import React from 'react'
 
-const PostHeader = props => {
+const PostHeader = post => {
   return (
     <div className='user'>
-      <img className='avatar' src='' alt='' />
+      <img className='avatar' src={post.avatar} alt='' />
       <div className='user_info'>
-        <strong>Giovani</strong>
-        <small>há 2 min</small>
+        <strong>{post.name}</strong>
+        <small>{post.moment}</small>
       </div>
     </div>
   )
