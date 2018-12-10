@@ -1,0 +1,25 @@
+$blue: blue;
+$gray: silver;
+$black: #232323;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    box-sizing: border-box;
+    background: $gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      color: $blue;
+    }
+  }
+}
